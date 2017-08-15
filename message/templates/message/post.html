@@ -1,0 +1,16 @@
+	{% extends "message/index.html" %}
+	
+	{% block content %}
+
+	{% for post in posts %}
+	<div class = "row">
+		<div class = "column-xs-12 border">
+			<p class = "date">{{post.post_date}}</p>
+			<p class = "posttitle"><a href="{% url 'post_detail' pk=post.pk %}">{{post.post_title}}</a></p>
+			<p class = "text">{{post.post_text|linebreaksbr}}</p>
+			<p class = "author">{{post.post_author}}</p>
+		</div>
+	</div>
+	{% endfor %}
+
+	{% endblock %}

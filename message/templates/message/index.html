@@ -13,16 +13,13 @@
 	<div class = "row text-center">
 		<div class = column-xs-12><p class = "title">BILLBOARD</p></div>
 	</div>
-	{% for post in posts %}
-	<div class = "row">
-		<div class = "column-xs-12 border">
-			<p class = "date">{{post.post_date}}</p>
-			<p class = "posttitle">{{post.post_title}}</p>
-			<p class = "text">{{post.post_text|linebreaksbr}}</p>
-			<p class = "author">{{post.post_author}}</p>
+	{% block content %}
+	{% endblock %}
+	<div class = "row text-center">
+		<div class = "column-xs-12 add text-center">
+
 		</div>
-	</div>
-	{% endfor %}
+	</div> 
 </div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
