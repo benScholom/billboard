@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.conf.urls import include, url
 from django.contrib import admin
 
+#first url pattern allows directing to the posts from the original url
 urlpatterns = [
     url(r'',include('message.urls')),
     url(r'^admin/', admin.site.urls),

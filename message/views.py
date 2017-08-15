@@ -3,6 +3,7 @@ from django.shortcuts import render
 from .models import Post
 from django.utils import timezone
 # Create your views here.
+#function to submit posts to template in order
 def posts(request):
-    plist = Post.objects.filter(post_date__lte=timezone.now()).order_by('post_date')
+    plist = Post.objects.filter(post_date__lte=timezone.now()).order_by('-post_date')
     return render(request, 'message/index.html', {'posts': plist})

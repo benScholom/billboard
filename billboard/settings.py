@@ -27,7 +27,7 @@ SECRET_KEY = "phj&@!4a&$y!ya6gm!#68td=4^bf87&iavo*uhf)9^g^x(q_7+"
 DEBUG = True
 
 # Application definition
-
+#added message to installed apps so classes and other features can be loaded
 INSTALLED_APPS = [
     'message.apps.MessageConfig',
     'django.contrib.admin',
@@ -104,6 +104,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
+#fgixed time zone
 TIME_ZONE = 'Asia/Jerusalem'
 USE_I18N = True
 USE_L10N = True
@@ -121,6 +122,7 @@ ALLOWED_HOSTS = ['*']
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+#added BASE-DIR and 'static' to ensure static files are loaded from appropriate directories
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
