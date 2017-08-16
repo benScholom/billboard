@@ -32,3 +32,22 @@
 	font-size: 24px;
 	text-align: right;
 }
+
+.add {
+	border: 1px dashed black;
+	height: 50px;
+	position:relative;
+}
+
+.add .btn-default{
+	color: white;
+	font-size:16px;
+	background-color:#66CDAA;
+	border-radius: 3px;
+	vertical-align:middle;
+	width:10%;
+	top:50%;
+	left:45%;
+	transform:translateY(-50%);
+	position:absolute;
+}

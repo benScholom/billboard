@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from .models import Post
 from django.utils import timezone
+from .forms import Pform
 # Create your views here.
 #function to submit posts to template in order
 def posts(request):
@@ -11,3 +12,6 @@ def posts(request):
 def post_detail(request, pk):
     selectedPost = Post.objects.get(pk=pk)
     return render(request, 'message/post_detail.html', {'post': selectedPost})
+def post_new(request):
+    form = Pform()
+    return render(request, 'message/post_add.html', {'form': form})
