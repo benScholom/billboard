@@ -1,3 +1,4 @@
+<!--code snippet which allows the creation of a reset button in django forms on a specific app by changing button type to 'reset'-->
 {% load i18n %}
 <div class="submit-row" {% if is_popup %}style="overflow: auto;"{% endif %}>
 {% if show_save %}<input type="submit" value="{% trans 'Save' %}" class="default" name="_save" {{ onclick_attrib }}/>{% endif %}
