@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Post
 from django.utils import timezone
 from .forms import Pform
@@ -12,6 +12,15 @@ def posts(request):
 def post_detail(request, pk):
     selectedPost = Post.objects.get(pk=pk)
     return render(request, 'message/post_detail.html', {'post': selectedPost})
+#bring up a page to sbmit new post
 def post_new(request):
-    form = Pform()
+    if request.method == "POST":
+        form = Pform(request.POST)
+        if form.is_valid():
+            post=form.save(commit=False)
+            post.post_date = timezone.now()
+            post.save()
+            return redirect('post_detail', pk=post.pk)
+    else:
+        form = Pform()
     return render(request, 'message/post_add.html', {'form': form})

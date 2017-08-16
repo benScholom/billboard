@@ -11,16 +11,11 @@
 	</head>
 <body>
 <div class = "container">
-	<div class = "row text-center">
-		<div class = column-xs-12><p class = "title">BILLBOARD</p></div>
+	<div class = "row">
+		<div class = "column-xs-12 bill text-center"><p class = "title"><a href="{% url 'posts' %}">BILLBOARD</a></p></div>
 	</div>
 	{% block content %}
 	{% endblock %}
-	<div class = "row">
-		<div class = "column-xs-12 add">
-		<a href="{% url 'post_new' %}"><button class = "btn-default"><i class="fa fa-plus" aria-hidden="true"></i></button></a>
-		</div>
-	</div> 
 </div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
