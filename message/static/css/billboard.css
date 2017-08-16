@@ -118,3 +118,9 @@ p label {
  .bill {
  	max-width:800px;
  }
+
+ .nopost p{
+ 	color:black;
+ 	font-family: Arial0
+ 	font-size: 24px;
+ }

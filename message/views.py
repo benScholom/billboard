@@ -20,7 +20,7 @@ def post_new(request):
             post=form.save(commit=False)
             post.post_date = timezone.now()
             post.save()
-            return redirect('post_detail', pk=post.pk)
+            return redirect('posts')
     else:
         form = Pform()
     return render(request, 'message/post_add.html', {'form': form})

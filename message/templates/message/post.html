@@ -1,7 +1,7 @@
 	{% extends "message/index.html" %}
 	
 	{% block content %}
-
+	{% if posts.exists %}
 	{% for post in posts %}
 	<div class = "row">
 		<div class = "column-xs-12 border">
@@ -12,6 +12,14 @@
 		</div>
 	</div>
 	{% endfor %}
+	{% else %}
+	<div class="row">
+		<div class = "column-xs-12 nopost text-center">
+			<p>No Messages...</p>
+			<p>Click the '+' button to add a new message</p>
+		</div>
+	</div>
+	{% endif %}
 	<div class = "row">
 		<div class = "column-xs-12 add">
 		<a href="{% url 'post_new' %}"><button id="add" class = "btn-default"><i class="fa fa-plus" aria-hidden="true"></i></button></a>
